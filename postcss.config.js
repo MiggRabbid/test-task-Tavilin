@@ -6,6 +6,7 @@ module.exports = {
       stage: 0,
       features: {}
     },
+    tailwindcss: {},
     autoprefixer: {},
   },
 };

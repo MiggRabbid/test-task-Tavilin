@@ -1,27 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Тестовое задания</title>
+    <title>Тестовое задания</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__app">
+          <img class="main__logo" src="./assets/logo-tie.png" alt="Test task" />
+          <div class="main__version">
+            <p>v 2.01</p>
+          </div>
+        </div>
+        <div class="header__logout">
+          <button type="button">
+            <img src="assets/icons/icon-logout.png" alt="Выйти" />
+          </button>
+        </div>
+      </div>
+    </header>
 
-</head>
-<body>
-  <div class="main">
-    <h1 class="main-title">
-      Тестовое задание
-    </h1>
-    <div class="main__description">
-      <img class="description__img" src="./assets/icons/icon-employees.png" alt="employees">
-      <p class="description__text">Тут текст</p>
-    </div>
-    <div class="main__description main__description-active">
-      <img class="description__img" src="./assets//icons/icon-inventory.png" alt="inventory">
-      <p  class="description__text">Тут снова текст, тест</p>
-    </div>
-  </div>
+    <main class="main">
+      <aside class="aside__menu">
+        <button class="menu__btn">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Имущество</p>
+        </button>
+        <button class="menu__btn">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Инвентаризация</p>
+        </button>
+        <button class="menu__btn">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Сотрудники</p>
+        </button>
+        <button class="menu__btn">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Уведомления</p>
+        </button>
+        <button class="menu__btn menu__btn-active">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Локации</p>
+        </button>
+        <button class="menu__btn">
+          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+          <p>Настройки</p>
+        </button>
+        <button class="menu__hidden">
+          <img src="./assets/icons/icon-tick.png" alt="Имущество" />
+          <p>Скрыть меню</p>
+        </button>
+      </aside>
+      <section class="section">
+        <div class="section__title">
+          <button id="itemParent">Локации</button>
+          <p id="itemBorder">/</p>
+          <button id="itemChild">Все локации</button>
+        </div>
+        <div class="section__item locations" id="locations">
+          <div class="locations__acions">
+            <div class="actions__main">
+              <div class="main__btns">
+                <button class="btns__item btns__item-active">Все локации</button>
+                <button class="btns__item">Импорт/Экспорт</button>
+                <button class="btns__item">Настройки</button>
+              </div>
+              <div class="main__btns">
+                <button class="item__sinc">
+                  <img src="./assets//icons/icon-sinc.png" alt="Синхронизация">
+                  <p class="sinc__text">Синхронизация</p>
+                  <p class="sinc__date" id="sincDate">(17.05.20240 15:23:21)</p>
+                </button>
+              </div>
+            </div>
+            <div class="actions__second"></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <script link></script>
-</body>
+    <footer>
+      <div class="footer">
+        <div class="footer__info">
+          <p class="info__text">Последний приём 20.09.2021 18:36:21</p>
+          <p class="info__text">Последняя передача 20.09.2021 18:38:21</p>
+        </div>
+        <div class="footer__docs">
+          <button type="button">
+            <img src="./assets/icons/icon-docs.png" alt="Документация" />
+            <p>Документация</p>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

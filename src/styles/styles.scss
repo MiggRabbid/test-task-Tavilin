@@ -1,6 +1,200 @@
-@import './variables.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.main__description-active {
-  background-color: $color-dark;
-  color: $color-light;
+@import './variables.scss';
+@import './extends.scss';
+
+body {
+  @apply min-h-screen flex flex-col items-center justify-between;
+  background-color: $color-grey-main;
+  box-sizing: border-boxs;
+
+  header {
+    @extend %main-container;
+    background-color: $color-light;
+  }
+
+  main {
+    @extend %main-container;
+    @apply h-full my-7 flex-1;
+  }
+
+  footer {
+    @extend %main-container;
+    background-color: $color-light;
+  }
+}
+
+.header {
+  @apply h-20 mx-auto
+  flex flex-row justify-between;
+
+  .header__app {
+    @apply h-full w-24 relative;
+
+    .main__logo {
+      @apply h-8 absolute left-4 top-6;
+    }
+
+    .main__version {
+      @apply text-xs text-center rounded absolute left-10 top-3;
+      width: 2.35rem;
+      height: 1.05rem;
+      background-color: $color-accent-main;
+      color: $color-light;
+    }
+  }
+
+  .header__logout {
+    @apply h-full me-8;
+
+    button {
+      @apply mt-8;
+
+      img {
+        @apply h-4;
+      }
+    }
+  }
+}
+
+.footer {
+  @apply h-20 flex flex-row justify-end items-center relative;
+
+  .footer__info {
+    @apply flex flex-row gap-7
+    absolute left-1/2 -translate-x-1/2;
+
+    .info__text {
+      @apply text-xs;
+      color: $color-grey-third;
+    }
+  }
+
+  .footer__docs {
+    @apply me-8;
+
+    button {
+      @apply flex flex-row gap-2;
+
+      img {
+        @apply h-5
+      }
+
+      p {
+        @apply text-base underline;
+        color: $color-accent-main;
+      }
+    }
+  }
+}
+
+.main {
+  @apply flex flex-row justify-between;
+
+  .aside__menu {
+    @apply w-72 flex flex-col grow-0;
+
+
+    .menu__btn, .menu__hidden {
+      @extend %font-book;
+      @extend %btn-main;
+      @apply w-full text-base
+      flex flex-row items-center;
+    }
+
+    .menu__btn:hover:not(.menu__btn-active), .menu__hidden:hover {
+      @extend %btn-main-hover;
+    }
+
+    .menu__btn {
+      @apply h-16 ps-4 justify-start;
+
+      img {
+        @apply h-4 me-4
+      }
+    }
+
+    .menu__btn-active {
+      @extend %btn-main-active;
+    }
+
+    .menu__hidden {
+      @apply h-16 justify-center;
+      color: $color-accent-main;
+
+      img {
+        @apply h-2 me-3
+      }
+    }
+
+  }
+
+  .section {
+    @apply mx-7 grow;
+
+    .section__title{
+      @extend %font-demi;
+      @apply w-full 
+      flex flex-row justify-start gap-1
+      text-3xl;
+      color: $color-black;
+
+      button:hover {
+        @apply underline;
+      }
+
+      p {
+        @apply ms-1 -rotate-12 text-2xl
+      }
+    }
+
+    .section__item {
+      @apply h-full w-full;
+    }
+
+    .locations {
+      @apply mt-6;
+
+      .locations__acions {
+        .actions__main {
+          @apply flex flex-row justify-between;
+
+          .main__btns {
+            @apply flex flex-row gap-5;
+
+            .btns__item {
+              @extend %font-medium;
+              @extend %btn-rounded;
+              @apply px-8 py-2 text-sm h-fit w-fit;
+            }
+
+            .btns__item-active {
+              @extend .btns__item;
+              @extend %btn-rounded-active;
+            }
+
+            .item__sinc {
+              @extend .btns__item;
+              @extend %btn-rounded-active;
+              @apply px-8 flex flex-row gap-2 items-center;
+
+              img {
+                @apply h-5 my-2;
+              }
+
+              .sinc__text {
+                @apply text-sm uppercase;
+              }
+
+              .sinc__date {
+                @apply text-xs
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

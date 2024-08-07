@@ -1,0 +1,98 @@
+
+@import './variables.scss';
+
+@font-face {
+  font-family: 'FuturaCyrillic';
+  src: url('../assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
+  font-weight: 400; /* Book */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillic';
+  src: url('../assets/fonts/FuturaCyrillicMedium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillic';
+  src: url('../assets/fonts/FuturaCyrillicDemi.ttf') format('truetype');
+  font-weight: 600; /* Semi-bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillic';
+  src: url('../assets/fonts/FuturaCyrillicBold.ttf') format('truetype');
+  font-weight: 700; /* bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillic';
+  src: url('../assets/fonts/FuturaCyrillicHeavy.ttf') format('truetype');
+  font-weight: 800; /* Heavy */
+  font-style: normal;
+}
+
+%font-main {
+  font-family: 'FuturaCyrillic', sans-serif;
+}
+
+%font-book {
+  @extend %font-main;
+  font-weight: 400;
+}
+
+%font-medium {
+  @extend %font-main;
+  font-weight: 500;
+}
+
+%font-demi {
+  @extend %font-main;
+  font-weight: 600;
+}
+
+%font-bold {
+  @extend %font-main;
+  font-weight: 700;
+}
+
+%font-heavy {
+  @extend %font-main;
+  font-weight: 800;
+}
+
+%main-container {
+  @extend %font-medium;
+  @apply w-full;
+  max-width: 1920px;
+}
+
+%btn-main {
+  background-color: $color-light;
+  color: $color-dark;
+}
+
+%btn-main-hover {
+  @apply border-4;
+  background-color: $color-grey-main;
+  border-color: $color-light;
+}
+
+%btn-main-active {
+  background-color: $color-dark;
+  color: $color-light;
+}
+
+%btn-rounded {
+  @extend %btn-main;
+  @apply rounded-md;
+}
+
+%btn-rounded-active {
+  @extend %btn-rounded;
+  @extend %btn-main-active;
+}

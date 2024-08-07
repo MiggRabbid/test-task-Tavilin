@@ -4,7 +4,7 @@ install:
 start:
 	npm run start
 
-build-prod:
+build-dev:
 	rm -rf dist
 	npm run build:dev
 
