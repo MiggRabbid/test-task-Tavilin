@@ -1,16 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import './variables.scss';
 @import './extends.scss';
 
-    /* 
-    * locations
-    */
+  /* 
+  * locations
+  */
 
 .locations {
-  @apply mt-4;
+  @apply mt-5 ps-1;
+
+  /* 
+  * title bttons
+  */
 
   .locations__acions {
     .actions__main {
@@ -20,9 +24,18 @@
         @apply flex flex-row gap-5;
 
         .btns__item {
-          @extend %font-medium;
           @extend %btn-rounded;
-          @apply px-8 py-2 text-sm h-fit w-fit;
+          @extend %font-demi;
+          @apply py-2 text-sm h-fit w-fit;
+          line-height: 18px;
+        }
+
+        .btns__item-all, .btns__item-settings {
+          @apply py-[10px] px-[31px];
+        }
+
+        .btns__item-migration {
+          @apply py-[10px] px-[29px];
         }
 
         .btns__item--active {
@@ -33,7 +46,8 @@
         .item__sinc {
           @extend .btns__item;
           @extend %btn-rounded-active;
-          @apply px-8 flex flex-row gap-2 items-center;
+          @apply px-5 flex flex-row gap-2 items-center;
+          letter-spacing: 0.14em;
 
           img {
             @apply h-5 my-2;
@@ -44,7 +58,7 @@
           }
 
           .sinc__date {
-            @apply text-xs
+            @apply text-[8px]
           }
         }
       }
@@ -52,7 +66,7 @@
 
     .actions__second {
       @extend .actions__main;
-      @apply mt-6;
+      @apply mt-5;
 
       .second__btns {
         @extend .main__btns;
@@ -61,7 +75,8 @@
         .item__create {
           @extend .btns__item;
           @extend %btn-rounded-active;
-          @apply px-12 flex flex-row gap-2 items-center;
+          @apply flex flex-row gap-2 items-center py-[11px] px-[52px];
+          letter-spacing: 0.14em;
 
           
           img {
@@ -101,7 +116,9 @@
           }
 
           .search-param__text{
+            @extend %font-second-medium;
             @apply text-sm cursor-default;
+            letter-spacing: 0.04em;
           }
         }
 
@@ -110,7 +127,7 @@
   
           .btns__search-input {
             @extend %font-medium;
-            @apply h-12 w-72 ps-9 pe-2 rounded-md
+            @apply h-12 w-[300px] ps-9 pe-2 rounded-md
             placeholder:font-medium
             placeholder:uppercase;
             color: $color-dark;
@@ -122,11 +139,8 @@
           }
 
           .btns__search-btn {
-            @apply absolute rounded-s-md
-            top-1/2 -translate-y-1/2;
-            left: 1px;
-            height: 46px;
-            width: 34px;
+            @apply h-[36px] w-[34px] absolute rounded-s-md
+            top-1/2 -translate-y-1/2 left-[1px];
             
             .search-btn__icon {
               @apply absolute size-3;
@@ -135,6 +149,77 @@
             }
           }
         }
+      }
+    }
+  }
+
+  /* 
+  * main table
+  */
+
+  .locations__table {
+    @apply mt-9;
+    
+    .table {
+      .table__perent {
+        @apply w-max relative;
+      }
+  
+      .table__nested {
+        @extend .table__perent;
+  
+        .nested__td {
+          @apply p-0 relative left-11;
+  
+        };
+      }
+  
+      td {
+        @extend %font-book;
+        @apply h-7 m-0 ps-0 pe-3 py-[11px] border-0 text-[15px] text-nowrap;
+        
+      }
+  
+      .table__first-col {
+        @apply h-10 py-2 flex flex-row justify-between items-center gap-[14px];
+  
+        .first-col__dots {
+          @apply h-4;
+        }
+  
+        .first-col__btn {
+          @apply w-fit flex flex-row justify-between items-center;
+  
+          .first-col__btn-icon {
+            @apply size-5 hidden;
+          }
+  
+          .first-col__btn-icon--active{
+            display: block;
+          }
+        }
+      }
+  
+      td:nth-child(2) {
+        @extend %font-second-demi;
+        @apply min-w-[100px] text-[14px];
+        color: $color-dark;
+      }
+  
+      td:nth-child(3) {
+        @extend %font-medium;
+        @apply min-w-11;
+        color: $color-accent-main;
+      }
+  
+      td:nth-child(4) {
+        @extend %font-second-book;
+        @apply min-w-32 text-sm;
+      }
+  
+      td:nth-child(5) {
+        @extend %font-second-demi;
+        @apply min-w-32 text-sm;
       }
     }
   }

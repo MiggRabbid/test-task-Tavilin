@@ -66,14 +66,14 @@
           <div class="locations__acions">
             <div class="actions__main">
               <div class="main__btns">
-                <button class="btns__item btns__item--active">Все локации</button>
-                <button class="btns__item">Импорт/Экспорт</button>
-                <button class="btns__item">Настройки</button>
+                <button class="btns__item btns__item-all btns__item--active">Все локации</button>
+                <button class="btns__item btns__item-migration">Импорт/Экспорт</button>
+                <button class="btns__item btns__item-settings">Настройки</button>
               </div>
               <div class="main__btns">
                 <button class="item__sinc">
-                  <img src="./assets/icons/icon-sinc.png" alt="Синхронизация">
-                  <p class="sinc__text">Синхронизация</p>
+                  <img src="./assets/icons/icon-sinc.png" alt="синхронизация">
+                  <p class="sinc__text">синхронизация</p>
                   <p class="sinc__date" id="sinc-date">(17.05.20240 15:23:21)</p>
                 </button>
               </div>
@@ -99,6 +99,101 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="locations__table">
+            <table class="table">
+              <tr  class="table__perent">
+                <td class="table__first-col">
+                  <button class="first-col__btn">
+                    <img src="assets/icons/icon-plus.png" class="first-col__btn-icon" alt="">
+                    <img src="assets/icons/icon-minus.png" class="first-col__btn-icon first-col__btn-icon--active" alt="">
+                  </button>
+                  <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                </td>
+                <td>Локация 1</td>
+                <td>512</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="table__nested">
+                <td colspan="5" class="nested__td">
+                  <table class="table table--nested">
+                    <tr>
+                      <td class="table__first-col">
+                        <button class="first-col__btn">
+                          <img src="assets/icons/icon-plus.png" class="first-col__btn-icon" alt="">
+                          <img src="assets/icons/icon-minus.png" class="first-col__btn-icon first-col__btn-icon--active" alt="">
+                        </button>
+                        <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                      </td>
+                      <td>Подотдел 1</td>
+                      <td>10</td>
+                      <td>Для утерь</td>
+                      <td></td>
+                    </tr>
+                    <tr class="table__nested">
+                      <td colspan="5"  class="nested__td">
+                        <table class="table table--nested">
+                          <tr>
+                            <td class="table__first-col">
+                              <button class="first-col__btn">
+                                <img src="assets/icons/icon-plus.png" class="first-col__btn-icon" alt="">
+                                <img src="assets/icons/icon-minus.png" class="first-col__btn-icon" alt="">
+                              </button>
+                              <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                            </td>
+                            <td>Подподотдел 1</td>
+                            <td>2</td>
+                            <td>Виртуальная</td>
+                            <td>Без штрихкода</td>
+                          </tr>
+                          <tr>
+                            <td class="table__first-col">
+                              <button class="first-col__btn">
+                                <img src="assets/icons/icon-plus.png" class="first-col__btn-icon" alt="">
+                                <img src="assets/icons/icon-minus.png" class="first-col__btn-icon" alt="">
+                              </button>
+                              <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                            </td>
+                            <td>Подподотдел 2</td>
+                            <td>2</td>
+                            <td>Виртуальная</td>
+                            <td>Без штрихкода</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr  class="table__perent">
+                <td class="table__first-col">
+                  <button class="first-col__btn">
+                    <img src="assets/icons/icon-plus.png" class="first-col__btn-icon first-col__btn-icon--active" alt="">
+                    <img src="assets/icons/icon-minus.png" class="first-col__btn-icon" alt="">
+                  </button>
+                  <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                </td>
+                <td>Локация 2</td>
+                <td>100</td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr class="table__perent">
+                <td class="table__first-col">
+                  <button class="first-col__btn">
+                    <img src="assets/icons/icon-plus.png" class="first-col__btn-icon first-col__btn-icon--active" alt="">
+                    <img src="assets/icons/icon-minus.png" class="first-col__btn-icon" alt="">
+                  </button>
+                  <img class="first-col__dots"src="assets/icons/icon-dots.png" alt="">
+                </td>
+                <td>Локация 3</td>
+                <td>100</td>
+                <td> </td>
+                <td> </td>
+              </tr>
+            </table>
+            
           </div>
         </div>
       </section>

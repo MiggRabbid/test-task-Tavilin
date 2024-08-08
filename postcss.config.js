@@ -1,3 +1,5 @@
+const { rule } = require('postcss');
+
 module.exports = {
   syntax: 'postcss-scss',
   plugins: {

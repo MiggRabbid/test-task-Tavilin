@@ -1,5 +1,9 @@
 @import './variables.scss';
 
+/* 
+* fonts main
+*/
+
 @font-face {
   font-family: 'FuturaCyrillic';
   src: url('../assets/fonts/FuturaCyrillicBook.ttf') format('truetype');
@@ -35,6 +39,35 @@
   font-style: normal;
 }
 
+/* 
+* fonts second
+*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Light.ttf') format('truetype');
+  font-weight: 400; /* Heavy */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500; /* Heavy */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets//fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 600; /* Heavy */
+  font-style: normal;
+}
+
+/* 
+* extend fonts main
+*/
+
 %font-main {
   font-family: 'FuturaCyrillic', sans-serif;
 }
@@ -62,6 +95,29 @@
 %font-heavy {
   @extend %font-main;
   font-weight: 800;
+}
+
+/* 
+* extend fonts second
+*/
+
+%font-second {
+  font-family: 'Montserrat', sans-serif;
+}
+
+%font-second-book {
+  @extend %font-second ;
+  font-weight: 400;
+}
+
+%font-second-medium {
+  @extend %font-second ;
+  font-weight: 500;
+}
+
+%font-second-demi {
+  @extend %font-second ;
+  font-weight: 600;
 }
 
 %main-container {

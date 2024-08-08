@@ -1,18 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 @import './variables.scss';
 @import './extends.scss';
 
 /* 
-* main styles
+* global styles
 */
 
 body {
-  @apply min-h-screen flex flex-col items-center justify-between;
+  @apply min-h-screen flex flex-col items-center justify-between box-border;
   background-color: $color-grey-main;
-  box-sizing: border-box;
+  height: 1243px;
 
   * {
     @extend %font-medium;
@@ -22,16 +22,18 @@ body {
   header {
     @extend %main-container;
     background-color: $color-light;
+    max-width: 1920px;
   }
 
   main {
     @extend %main-container;
     @apply h-full my-7 flex-1;
+    max-width: 1920px;
   }
 
   footer {
     @extend %main-container;
-    background-color: $color-light;
+    @extend header;
   }
 }
 
@@ -47,21 +49,20 @@ body {
     @apply h-full w-24 relative;
 
     .main__logo {
-      @apply h-8 absolute left-4 top-6;
+      @apply h-8 absolute left-[15px] top-[26px];
     }
 
     .main__version {
-      @apply text-xs text-center cursor-default
-      rounded absolute left-10 top-3;
-      width: 2.35rem;
-      height: 1.05rem;
+      @apply h-[1.05rem] w-[2.35rem] 
+      text-xs text-center cursor-default
+      rounded absolute left-[41px] top-[14px];
       background-color: $color-accent-main;
       color: $color-light;
     }
   }
 
   .header__logout {
-    @apply h-full me-8;
+    @apply h-full me-[29px];
 
     button {
       @apply mt-8;
@@ -104,6 +105,10 @@ body {
   }
 }
 
+/* 
+* main
+*/
+
 .main {
   @apply flex flex-row justify-between;
 
@@ -119,7 +124,7 @@ body {
     .menu__btn, .menu__hidden {
       @extend %font-book;
       @extend %btn-main;
-      @apply w-60 text-base
+      @apply w-72 text-base
       flex flex-row items-center;
     }
 
@@ -159,9 +164,9 @@ body {
 
     .section__title{
       @extend %font-demi;
-      @apply w-full 
-      flex flex-row justify-start gap-1
-      text-3xl;
+      @apply w-full ms-1 leading-none
+      flex flex-row justify-start;
+      font-size: 32px;
       color: $color-black;
 
       button:hover {
@@ -169,7 +174,7 @@ body {
       }
 
       p {
-        @apply ms-1 -rotate-12 text-2xl
+        @apply mx-2
       }
     }
 
