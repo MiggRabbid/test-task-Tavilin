@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables.scss';
+@import './extends.scss';
+
+    /* 
+    * locations
+    */
+
+.locations {
+  @apply mt-4;
+
+  .locations__acions {
+    .actions__main {
+      @apply flex flex-row justify-between items-center;
+
+      .main__btns {
+        @apply flex flex-row gap-5;
+
+        .btns__item {
+          @extend %font-medium;
+          @extend %btn-rounded;
+          @apply px-8 py-2 text-sm h-fit w-fit;
+        }
+
+        .btns__item--active {
+          @extend .btns__item;
+          @extend %btn-rounded-active;
+        }
+
+        .item__sinc {
+          @extend .btns__item;
+          @extend %btn-rounded-active;
+          @apply px-8 flex flex-row gap-2 items-center;
+
+          img {
+            @apply h-5 my-2;
+          }
+
+          .sinc__text {
+            @apply text-sm uppercase;
+          }
+
+          .sinc__date {
+            @apply text-xs
+          }
+        }
+      }
+    }
+
+    .actions__second {
+      @extend .actions__main;
+      @apply mt-6;
+
+      .second__btns {
+        @extend .main__btns;
+        @apply items-center gap-7;
+
+        .item__create {
+          @extend .btns__item;
+          @extend %btn-rounded-active;
+          @apply px-12 flex flex-row gap-2 items-center;
+
+          
+          img {
+            @apply h-3 my-2;
+          }
+
+          .create__text {
+            @apply text-sm uppercase;
+          }
+        }
+
+        .btns__search-param {
+          @apply flex flex-row gap-2 relative;
+
+          .search-param__checkbox {
+            @apply size-5 rounded-sm;
+            background-color: $color-light;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none
+          }
+          
+          .search-param__checkbox:checked {
+            @apply relative;
+            background-color: $color-accent-main;
+          }
+
+          .search-param__checkbox:checked::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('../assets/icons/icon-check.png');
+            background-size: 8.5px 6.5px;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .search-param__text{
+            @apply text-sm cursor-default;
+          }
+        }
+
+        .btns__search {
+          @apply relative;
+  
+          .btns__search-input {
+            @extend %font-medium;
+            @apply h-12 w-72 ps-9 pe-2 rounded-md
+            placeholder:font-medium
+            placeholder:uppercase;
+            color: $color-dark;
+          }
+
+          .btns__search-input:focus {
+            @apply outline-offset-0;
+            outline-color: $color-dark;
+          }
+
+          .btns__search-btn {
+            @apply absolute rounded-s-md
+            top-1/2 -translate-y-1/2;
+            left: 1px;
+            height: 46px;
+            width: 34px;
+            
+            .search-btn__icon {
+              @apply absolute size-3;
+              top: 18px;
+              left: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

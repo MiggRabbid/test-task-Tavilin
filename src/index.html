@@ -25,58 +25,80 @@
 
     <main class="main">
       <aside class="aside__menu">
-        <button class="menu__btn">
+        <button class="menu__btn" id="btn-property">
           <img src="./assets/icons/icon-property.png" alt="Имущество" />
           <p>Имущество</p>
         </button>
-        <button class="menu__btn">
-          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+        <button class="menu__btn" id="btn-property"">
+          <img src="./assets/icons/icon-inventory.png" alt="Инвентаризация" />
           <p>Инвентаризация</p>
         </button>
-        <button class="menu__btn">
-          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+        <button class="menu__btn" id="btn-employees">
+          <img src="./assets/icons/icon-employees.png" alt="Сотрудники" />
           <p>Сотрудники</p>
         </button>
-        <button class="menu__btn">
-          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+        <button class="menu__btn" id="btn-notifications">
+          <img src="./assets/icons/icon-notifications.png" alt="Уведомления" />
           <p>Уведомления</p>
         </button>
-        <button class="menu__btn menu__btn-active">
-          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+        <button class="menu__btn menu__btn--active" id="btn-locations">
+          <img src="./assets/icons/icon-locations.png" alt="Локации" />
           <p>Локации</p>
         </button>
-        <button class="menu__btn">
-          <img src="./assets/icons/icon-property.png" alt="Имущество" />
+        <button class="menu__btn" id="btn-settings">
+          <img src="./assets/icons/icon-settings.png" alt="Настройки" />
           <p>Настройки</p>
         </button>
-        <button class="menu__hidden">
-          <img src="./assets/icons/icon-tick.png" alt="Имущество" />
+        <button class="menu__hidden" id="btn-hidden">
+          <img src="./assets/icons/icon-tick.png" alt="Скрыть меню" />
           <p>Скрыть меню</p>
         </button>
       </aside>
+
       <section class="section">
         <div class="section__title">
-          <button id="itemParent">Локации</button>
-          <p id="itemBorder">/</p>
-          <button id="itemChild">Все локации</button>
+          <button id="item-parent">Локации</button>
+          <p id="item-border">/</p>
+          <button id="item-child">Все локации</button>
         </div>
+
         <div class="section__item locations" id="locations">
           <div class="locations__acions">
             <div class="actions__main">
               <div class="main__btns">
-                <button class="btns__item btns__item-active">Все локации</button>
+                <button class="btns__item btns__item--active">Все локации</button>
                 <button class="btns__item">Импорт/Экспорт</button>
                 <button class="btns__item">Настройки</button>
               </div>
               <div class="main__btns">
                 <button class="item__sinc">
-                  <img src="./assets//icons/icon-sinc.png" alt="Синхронизация">
+                  <img src="./assets/icons/icon-sinc.png" alt="Синхронизация">
                   <p class="sinc__text">Синхронизация</p>
-                  <p class="sinc__date" id="sincDate">(17.05.20240 15:23:21)</p>
+                  <p class="sinc__date" id="sinc-date">(17.05.20240 15:23:21)</p>
                 </button>
               </div>
             </div>
-            <div class="actions__second"></div>
+          
+            <div class="actions__second">
+              <div class="second__btns">
+                <button class="item__create">
+                  <img src="./assets/icons/icon-plus-without-bg.png" alt="Создать локацию">
+                  <p class="create__text">Создать локацию</p>
+                </button>
+              </div> 
+              <div class="second__btns">
+                <div class="btns__search-param" id="search__param">
+                  <input class="search-param__checkbox" type="checkbox" id="search-param-checkbox" placeholder="Поиск по точному значению">
+                  <p class="search-param__text" >Поиск по точному значению</p>
+                </div>
+                <div class="btns__search">
+                  <input class="btns__search-input" type="search" id="search" placeholder="Поиск">
+                  <button class="btns__search-btn">
+                    <img class="search-btn__icon" src="./assets//icons/icon-search.png" alt="ПОИСК">
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
